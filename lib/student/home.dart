@@ -18,7 +18,20 @@ class StudentHome extends StatelessWidget {
         backgroundColor: Colors.black12,
         appBar: AppBar(
           backgroundColor: Colors.pink[400],
-          title: Text('SU Library - Books'),
+          title: Row(
+            children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0.0,0.0,5.0,0.0),
+                  child: Image(
+                    height: 40.0,
+                    width: 40.0,
+                    alignment: Alignment.centerLeft,
+                    image: AssetImage('assets/icon.png'),
+                  ),
+                ),
+              Text('SU Library - Books'),
+            ],
+          ),
         ),
         drawer: Drawer(
           child: OurDrawer(),
