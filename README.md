@@ -27,6 +27,5 @@ There is a check if the text fields are empty inside login page, add a book page
 Everyone including admin can know about the issue details of the book.
 
 ### Cons:-
-The admin cannot issue/return the books.
 
-Each time Admin signs in, signed by an anonymous account as there is no option in firebase for API login.
+Each time Admin signs in, signed by an anonymous account as there is no option in firebase for python API login. But another method which is made in this app is login with credentials stored in firebase.
