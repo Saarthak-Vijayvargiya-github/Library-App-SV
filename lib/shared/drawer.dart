@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:su_library/admin/addBook.dart';
+import 'package:su_library/admin/update_details.dart';
 import 'package:su_library/shared/auth.dart';
 
 class OurDrawer extends StatefulWidget {
@@ -15,6 +16,9 @@ class _OurDrawerState extends State<OurDrawer> {
 
     void _goToAddBook() {
       Navigator.push(context, MaterialPageRoute(builder: (context) => addBook()));
+    }
+    void _goToUpdateDetails() {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => updateDetails()));
     }
     Widget drawList;
 
@@ -115,6 +119,14 @@ class _OurDrawerState extends State<OurDrawer> {
               trailing: Icon(Icons.arrow_back),
               onTap: () async{
                 Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Update username and password'),
+              trailing: Icon(Icons.update),
+              onTap: () async{
+                Navigator.pop(context);
+                _goToUpdateDetails();
               },
             ),
             SizedBox(height: 20.0,),

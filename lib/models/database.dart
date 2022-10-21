@@ -25,5 +25,30 @@ class DatabaseService{
   Stream<UserData> get userInfo{
     return users.doc(uid).snapshots().map(_userDataFromSnapshot);
   }
+}
 
+class DatabaseServiceAdmin{
+  final String uid;
+  DatabaseServiceAdmin({this.uid});
+
+  final CollectionReference admin = FirebaseFirestore.instance.collection('admin');
+
+  Future updateAdminData(String name, String password) async{
+    return await admin.doc(uid).set({
+      'username': name,
+      'password': password,
+    });
+  }
+
+  UserDataAdmin _adminDataFromSnapshot(DocumentSnapshot snapshot){
+    return UserDataAdmin(
+      uid: uid,
+      username: snapshot['username'],
+      password: snapshot['password'],
+    );
+  }
+
+  Stream<UserDataAdmin> get userInfo{
+    return admin.doc(uid).snapshots().map(_adminDataFromSnapshot);
+  }
 }
