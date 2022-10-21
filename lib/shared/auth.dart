@@ -1,7 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:provider/provider.dart';
 import 'package:su_library/models/database.dart';
 import 'package:su_library/models/userData.dart';
 import 'package:http/http.dart';
@@ -81,7 +79,7 @@ class AuthService {
   //
   // }
 
-  // Fuction for Firestore database login
+  // Function for Firestore database login
   Future<dynamic> adminLogin(String name, String pass, UserDataAdmin admin) async {
     if (name == admin.username && pass == admin.password) {
       // Anonymous Sign in was only the option for admin as there was no way for API login
