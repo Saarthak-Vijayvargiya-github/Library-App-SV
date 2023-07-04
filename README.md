@@ -13,8 +13,9 @@ User can login via their google account.
 User can issue/return books by a simple checkbox.
 
 ### Login by admin
-Login Credentials:- username = SUTT_admin , password = 1234567890  (Login through Postman API)
+OUTDATED:- Login Credentials:- username = SUTT_admin , password = 1234567890  (Login through Postman API)
 
+Login Credentials:- username = SUTT_admin , password = 1234567890
 Admin is logged in via an post api method and signed into the firebase anonymously.
 
 Admin has the power to add books. This service can be accesed by the drawer.
@@ -28,4 +29,6 @@ Everyone including admin can know about the issue details of the book.
 
 ### Cons:-
 
-Each time Admin signs in, signed by an anonymous account as there is no option in firebase for python API login. But another method which is made in this app is login with credentials stored in firebase.
+OUTDATED:- Each time Admin signs in, signed by an anonymous account as there is no option in firebase for python API login. But another method which is made in this app is login with credentials stored in firebase.
+
+Now Admin can sign in with credentials already stored in one account already made for admin in the firebase. But this does not use Postman API. 
